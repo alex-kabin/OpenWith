@@ -4,8 +4,7 @@ File open helper utility
 Starts configured (in OpenWith.yaml) target program (or offers to choose one of some in UI-form) on specified (command line arg) source file.
 Especially useful with Total Commander as F4 (Editor) hotkey tool.
 
-For example,
-Start 
+For example, start 
 ```
 OpenWith.exe movie.mkv
 ```
