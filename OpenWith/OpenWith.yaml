@@ -1,0 +1,31 @@
+﻿autoCloseTimeout: 10
+opacity: 0.8
+headerTemplate: 'Open {0} with:'
+
+vars:
+  PortableApps: 'C:\PortableApps'
+
+mappings:
+  - name: Notepad++
+    command: '%PortableApps%\text\Notepad++\notepad++.exe'
+
+  - name: BinkPlayer    
+    filters:
+      ext: 'bik'
+    command: '%PortableApps%\player\RADTools\binkplay.exe'
+    args: '%1 /W-0.4 /H-0.4'
+  
+  - name: Word
+    filters:
+      ext: 'docx?'
+    command: '%ProgramFiles%\Microsoft Office\root\Office16\WINWORD.EXE'
+
+  - name: Excel
+    filters:
+      ext: 'xlsx?'
+    command: '%ProgramFiles%\Microsoft Office\root\Office16\EXCEL.EXE'
+
+  - name: MKVToolNix
+    filters:
+      ext: ['mkv', 'mp4', 'avi']
+    command: '%PortableApps%\video\mkvtoolnix\mkvtoolnix-gui1.exe'

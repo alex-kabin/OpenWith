@@ -1,0 +1,21 @@
+﻿{
+  "autoCloseTimout": 10,
+  
+  "vars": {
+    "APPS": "c:\\PortableApps"
+  },
+  
+  "mappings": [
+    {
+      "filters": {
+        "ext": "bik"
+      },
+      "priority": 0,
+      "name": "BikPlayer",
+      "command": "%APPS%\\video\\RADTools\\binkplay.exe",
+      "args": "%1 /W-0.4 /H-0.4",
+      "admin": false,
+      "icon": "%APPS%\\video\\RADTools\\binkplay.exe"
+    }
+  ]
+}

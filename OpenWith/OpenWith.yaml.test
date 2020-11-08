@@ -1,0 +1,33 @@
+﻿autoCloseTimeout: 10
+opacity: 0.8
+headerTemplate: 'Open {0} with:'
+
+vars:
+  APPS: 'C:\PortableApps'
+
+mappings:
+  - name: BikPlayer    
+    filters:
+      ext: 'bik'
+    priority: 0
+    command: '%APPS%\video\RADTools\binkplay.exe'
+    args: '%1 /W-0.4 /H-0.4'
+    admin: false
+    
+  - name: BikPlayer2-long-long-long
+    filters:
+      ext: 'bik?'
+    priority: 0
+    command: '%APPS%\player\RADTools\binkplay.exe'
+    args: '%1 /W-0.5 /H-0.5'
+    admin: true  
+
+  - name: Notepad
+    filters:
+      ext: '.*'
+      size:
+        min: '100'
+        max: '200m'
+      bytes: [0x10, 0x20, 'A']
+    command: 'c:\windows\notepad.exe'
+    icon: 'c:\windows\notepad.exe'
