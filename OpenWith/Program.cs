@@ -51,7 +51,7 @@ namespace OpenWith
             var args = Environment.GetCommandLineArgs();
             app.Run(args);
 
-            File.AppendAllText(Path.Combine(dir, "Stat.txt"), $"{DateTime.Now} : {args[1]} : {stopwatch.ElapsedMilliseconds}ms\n");
+            //File.AppendAllText(Path.Combine(dir, "Stat.txt"), $"{DateTime.Now} : {args[1]} : {stopwatch.ElapsedMilliseconds}ms\n");
         }
     }
 }
