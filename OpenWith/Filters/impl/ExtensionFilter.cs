@@ -12,7 +12,7 @@ namespace OpenWith.Filters.impl
             if (config is IEnumerable<object> list) {
                 return new ExtensionFilter(list.Where(s => s != null).Select(s => s.ToString()));
             }
-            if(config != null) { 
+            if(config != null) {
                 return new ExtensionFilter(config.ToString());
             }
             return null;
@@ -28,7 +28,7 @@ namespace OpenWith.Filters.impl
             _set = null;
             _regex = new Regex($"^({expr})$", RegexOptions.IgnoreCase | RegexOptions.Singleline);
         }
-        
+
         public ExtensionFilter(IEnumerable<string> list) {
             _regex = null;
             _set = new HashSet<string>(list.Select(s => s.ToLowerInvariant()));
@@ -41,11 +41,8 @@ namespace OpenWith.Filters.impl
             if (string.IsNullOrEmpty(path)) {
                 return false;
             }
-            
-            var ext = Path.GetExtension(path);
-            if (ext[0] == '.') {
-                ext = ext.Substring(1);
-            }
+
+            var ext = Path.GetExtension(path).TrimStart('.');
             if (_set != null) {
                 return _set.Contains(ext.ToLowerInvariant());
             }
