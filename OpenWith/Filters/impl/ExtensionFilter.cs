@@ -12,7 +12,7 @@ namespace OpenWith.Filters.impl
             if (config is IEnumerable<object> list) {
                 return new ExtensionFilter(list.Where(s => s != null).Select(s => s.ToString()));
             }
-            if(config != null) {
+            if (config != null) {
                 return new ExtensionFilter(config.ToString());
             }
             return null;
