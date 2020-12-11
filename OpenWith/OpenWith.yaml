@@ -14,7 +14,7 @@ mappings:
       ext: 'bik'
     command: '%PortableApps%\player\RADTools\binkplay.exe'
     args: '%1 /W-0.4 /H-0.4'
- 
+
   - name: Word
     filters:
       ext: 'docx?'
@@ -29,3 +29,8 @@ mappings:
     filters:
       ext: ['mkv', 'mp4', 'avi']
     command: '%PortableApps%\video\mkvtoolnix\mkvtoolnix-gui1.exe'
+
+  - name: DICOM
+    filters:
+      name: ['DICOMDIR']
+    command: '%PortableApps%\gfx\MicroDICOM\mDicom.exe'

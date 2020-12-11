@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviors\ApplyThemeStyleBehavior.cs" />
+    <Compile Include="Filters\impl\NameFilter.cs" />
     <Compile Include="Filters\impl\MagicBytesFilter.cs" />
     <Compile Include="Filters\impl\SizeFilter.cs" />
     <Compile Include="Model\Mapping.cs" />

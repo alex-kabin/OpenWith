@@ -39,6 +39,7 @@ namespace OpenWith
                 configProvider,
                 dialogService,
                 new FilterFactory()
+                        .WithFilter("name", NameFilter.Build)
                         .WithFilter("ext", ExtensionFilter.Build)
                         .WithFilter("size", SizeFilter.Build)
                         .WithFilter("magic", MagicBytesFilter.Build),
@@ -46,7 +47,7 @@ namespace OpenWith
                 new FileIconProvider()
             );
 
-            Stopwatch stopwatch = Stopwatch.StartNew();
+            //Stopwatch stopwatch = Stopwatch.StartNew();
 
             var args = Environment.GetCommandLineArgs();
             app.Run(args);
