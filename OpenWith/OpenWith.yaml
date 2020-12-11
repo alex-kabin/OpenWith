@@ -9,12 +9,12 @@ mappings:
   - name: Notepad++
     command: '%PortableApps%\text\Notepad++\notepad++.exe'
 
-  - name: BinkPlayer    
+  - name: BinkPlayer
     filters:
       ext: 'bik'
     command: '%PortableApps%\player\RADTools\binkplay.exe'
     args: '%1 /W-0.4 /H-0.4'
-  
+ 
   - name: Word
     filters:
       ext: 'docx?'

@@ -13,11 +13,11 @@ namespace OpenWith
         [STAThread]
         public static void Main() {
             var assembly = Assembly.GetExecutingAssembly();
-            
+
             IDialogService dialogService = new MessageBoxDialogService(
                 assembly.GetCustomAttribute<AssemblyTitleAttribute>()?.Title
             );
-            
+
             var dir = Path.GetDirectoryName(assembly.Location);
 
             IConfigProvider configProvider = null;
@@ -36,7 +36,7 @@ namespace OpenWith
             }
 
             var app = new OpenWithApp(
-                configProvider, 
+                configProvider,
                 dialogService,
                 new FilterFactory()
                         .WithFilter("ext", ExtensionFilter.Build)

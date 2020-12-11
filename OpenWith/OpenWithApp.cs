@@ -21,8 +21,8 @@ namespace OpenWith
         private Config _config = null;
 
         public OpenWithApp(
-            IConfigProvider configProvider, 
-            IDialogService dialogService, 
+            IConfigProvider configProvider,
+            IDialogService dialogService,
             IFilterFactory filterFactory,
             IProcessStarter processStarter,
             IIconProvider iconProvider
@@ -137,12 +137,12 @@ namespace OpenWith
                     CloseAction = () => mainWindow.Close()
                 }
             };
-            
+
             var app = new Application {
                 ShutdownMode = ShutdownMode.OnMainWindowClose,
                 MainWindow = mainWindow
             };
-            
+
             mainWindow.Show();
             app.Run();
         }
